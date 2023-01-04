@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+header {
+  /* sticky는 자신의 부모요소 안에서만 적용 */
+  /* 부모의 height 값만큼 고정 */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: skyblue;
+  padding: 10px 0px;
+}
+
+.loge img {
+  width: 50px;
+  margin-left: 20px;
+
+}
+
+.gnb-list {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-right: 30px;
+}
+
+.gnb-item a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 300ms ease-in-out;
+}
+
+.gnb-item a:hover {
+  color: dodgerblue;
+}
+
+.backgrond {
+  height: 600px;
+  background-image: url(./images/스누피배경.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 48px;
+}
+
+.main-content {
+  margin-top: 20px;
+ }
+
+.main-btn {
+  margin-top: 20px;
+}
+
+.main-btn {
+  border: none;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.post-card-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding: 0 40px;
+}
+
+.post-card {
+  position: relative;
+  top: -80px;
+  width: 80%;
+  height: 300px;
+  margin: 20px auto;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 550px;
+  /* 최대폭을 결정하는 css속성 : 이 이상은 커지지 말아라 */
+  min-width: 300px;
+  /* 최소폭을 결정하는 css속성 : 이 이상은 작아지지 말아라 */
+  background-color: rgb(217, 241, 254);
+}
+
+.fixed-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: rgb(217, 241, 254);
+}
+
+.back1, .back2 {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.back1 {
+  background-image: url(./images/스누피2.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom left 450px;
+  margin-right: 20px;
+}
+
+.back2 {
+  background-image: url(./images/pngegg.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom right 430px;
+}
+
+footer {
+ background-color: skyblue;
+ padding: 20px 0;
+}
+
+.footer-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrapper h3 {
+  color: #fff;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-item {
+  margin-right: 20px;
+}
+
+.footer-item:last-child {
+  margin-right: 0;
+}
+
+.footer-item i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-item i{
+  transition: color 300ms ease-in-out;
+}
+
+.footer-item i:hover {
+  color: dodgerblue;
+}
+
+.top-btn i {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 38px;
+  color: rgb(41, 127, 161);
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.side-menu {
+  position: fixed;
+  top:150px;
+  right: 50px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.side-menu-item {
+  padding: 10px 0;
+}
+
+.side-menu-item a {
+  color: #888;
+  transition: all 300ms ease-in-out;
+}
+
+.side-menu-item a:hover {
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+@media screen and (max-width:1200px) {
+  body {
+    border: 3px solid red;
+  }
+
+  .backgrond {
+    height: 400px;
+  }
+
+  .post-card-box {
+    flex-direction: column;
+  }
+
+  .post-card {
+    max-width: none;
+    min-width: none;
+    width: 700px;
+    height: 200px;
+    padding: 30px;
+  }
+
+  .back1, .back2 {
+    background-color: rgb(217, 241, 254)
+  }
+
+  .back1 {
+    background-position: bottom right 350px;
+  }
+
+  .back2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    border: 3px solid blue;
+  }
+
+  .backgrond {
+    height: 300px;
+  }
+
+  .post-card {
+    max-width: none;
+    min-width: none;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+  }
+
+  .back1 {
+    background-position: bottom right 150px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-wrapper h3 {
+    margin-bottom: 10px;
+  }
+
+  .side-menu {
+    display: none;
+  }
+}
